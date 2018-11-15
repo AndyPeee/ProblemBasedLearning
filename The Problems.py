@@ -1,3 +1,4 @@
+import random
 #6
 # Write a program that will keep track of a shopping list.
 # The program will continuously ask the user for information until the user indicates completion.
@@ -27,21 +28,50 @@ shopping()
 prime_list = []
 def prime_numero(num):
     if num >= 1:
-        y = 1
-        for y in range (2,num):
-            if num % y == 0:
+        for w in range(2, num):
+            if num % w == 0:
                 break
         else:
             return num
+    return ""
 def prime(n):
-    y = 1
+    y = 2
     w = 1
     while w == 1:
         if y < n:
-            holder = prime_numero(num=y)
+            holder = prime_numero(y)
             prime_list.append(holder)
-            y += y
+            y += 1
         else:
             print(prime_list)
             break
-prime(n=int(input("What number do you want? ")))
+
+
+prime(int(input("What number do you want? ")))
+
+#Write a program that will keep track of a simulated dice being rolled a given number of times (by the user).
+# The program should print the number of times each result was rolled.
+dicelist=[]
+def sum_of_dice(dice, numrolls):
+    amount = 0
+    for x in range(0, int(numrolls)):
+        amount = random.randint(1, dice)
+        dicelist.append(amount)
+    print(dicelist)
+    print(dicelist.count(1), " ones")
+    print((dicelist.count(2))," two's")
+    print((dicelist.count(3))," three's")
+    print((dicelist.count(4))," fours")
+    print((dicelist.count(5))," five's")
+    print((dicelist.count(6))," sixes")
+
+
+
+
+sum_of_dice(dice=6, numrolls=int(input("How many times do you want to roll this dice? ")))
+
+#Write a function called pivotList(inList, number)
+# that will return a list composed of all elements from inList that are less than number.
+# inList is a list of numbers, and number is the pivot value.
+
+listyboi = []
