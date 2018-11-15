@@ -74,21 +74,19 @@ sum_of_dice(dice=6, numrolls=int(input("How many times do you want to roll this 
 # that will return a list composed of all elements from inList that are less than number.
 # inList is a list of numbers, and number is the pivot value.
 
-listyboi = [0,1,2,3,4,5,6,7,8,9]
-listyboiv2 = []
+listy = [0,1,2,3,4,5,6,7,8,9]
+listy2 = []
 def pivotlist(inlist, number):
     g = 1
-    for g in len(inlist):
-        if number < inlist(g):
-            listyboiv2.append(g)
-        else:
-            break
-    print(listyboiv2)
+    for g in range(len(listy)):
+        if number > inlist[g]:
+            listy2.append(inlist[g])
+    print(listy2)
 
 
-pivotlist(inlist=listyboi, number=input("What number do you want? "))
+pivotlist(inlist=listy, number=int(input("What number do you want? ")))
 
 #Write a function called largestValue(inList) that will return the largest value in the inList of numbers.
 # (You may not use the ‘max’ feature of lists to write this function)
 
-#def largest_value(listy):
+def largest_value(listy):
