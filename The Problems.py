@@ -38,7 +38,7 @@ def prime(n):
     y = 2
     w = 1
     while w == 1:
-        if y < n:
+        if y <= n:
             holder = prime_numero(y)
             prime_list.append(holder)
             y += 1
@@ -58,7 +58,7 @@ def sum_of_dice(dice, numrolls):
         amount = random.randint(1, dice)
         dicelist.append(amount)
     print(dicelist)
-    print(dicelist.count(1), " ones")
+    print((dicelist.count(1)), " ones")
     print((dicelist.count(2))," two's")
     print((dicelist.count(3))," three's")
     print((dicelist.count(4))," fours")
@@ -74,4 +74,21 @@ sum_of_dice(dice=6, numrolls=int(input("How many times do you want to roll this 
 # that will return a list composed of all elements from inList that are less than number.
 # inList is a list of numbers, and number is the pivot value.
 
-listyboi = []
+listyboi = [0,1,2,3,4,5,6,7,8,9]
+listyboiv2 = []
+def pivotlist(inlist, number):
+    g = 1
+    for g in len(inlist):
+        if number < inlist(g):
+            listyboiv2.append(g)
+        else:
+            break
+    print(listyboiv2)
+
+
+pivotlist(inlist=listyboi, number=input("What number do you want? "))
+
+#Write a function called largestValue(inList) that will return the largest value in the inList of numbers.
+# (You may not use the ‘max’ feature of lists to write this function)
+
+#def largest_value(listy):
