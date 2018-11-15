@@ -88,5 +88,36 @@ pivotlist(inlist=listy, number=int(input("What number do you want? ")))
 
 #Write a function called largestValue(inList) that will return the largest value in the inList of numbers.
 # (You may not use the ‘max’ feature of lists to write this function)
+hugelist = [0,1,2,1000000000,4,5,7,6,4,8]
+def largest_value(big_list):
+    big_list.sort()
+    print(big_list[(len(big_list)-1)])
+largest_value(big_list=hugelist)
 
-def largest_value(listy):
+#Write a function called mergeList(list1, list2) that will take two lists (list1 and list2,
+# both of which are sorted) as parameters and will return a single list that merges the two lists together into a single sorted list.
+# You may not use the .sort() function available to lists.
+
+list1 = [5, 1, 9, 8, 4]
+list2 = [0, 6, 2, 3, 7]
+def mergelist(merge1, merge2):
+    for e in range(0, len(merge2)):
+        f = merge2[e]
+        merge1.append(f)
+        bubblesort(merge1)
+    print(merge1)
+
+def bubblesort(merge1):
+    for passthenum in range(len(merge1)-1, 0, -1):
+        for i in range(passthenum):
+            if merge1[i]>merge1[i+1]:
+                holder1 = merge1[i]
+                merge1[i] = merge1[i+1]
+                merge1[i+1] = holder1
+
+
+mergelist(merge1=list1, merge2=list2)
+
+#There is a four player game that involves rolling a dice for each player.
+# Write a program that will keep track of the history of the rolls for each player.
+# For full credit, how could you use 2D lists?
