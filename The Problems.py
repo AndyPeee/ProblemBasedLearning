@@ -152,45 +152,47 @@ def tictactoe(move,q):
             top_row[1]="O"
     elif move == "tr":
         if q%2==0:
-            top_row[2]="X"
+            top_row[2] = "X"
         else:
-            top_row[2]="O"
+            top_row[2] = "O"
     elif move == "ml":
-        if q%2==0:
-            middle_row[0]="X"
+        if q % 2 == 0:
+            middle_row[0] = "X"
         else:
-            middle_row[0]="O"
+            middle_row[0] = "O"
     elif move == "mm":
-        if q%2==0:
-            middle_row[1]="X"
+        if q % 2 == 0:
+            middle_row[1] = "X"
         else:
-            middle_row[1]="O"
+            middle_row[1] = "O"
     elif move == "mr":
-        if q%2==0:
-            middle_row[2]="X"
+        if q % 2 == 0:
+            middle_row[2] = "X"
         else:
-            middle_row[2]="O"
+            middle_row[2] = "O"
     elif move == "bl":
-        if q%2==0:
-            bottom_row[0]="X"
+        if q % 2 == 0:
+            bottom_row[0] = "X"
         else:
-            bottom_row[0]="O"
+            bottom_row[0] = "O"
     elif move == "bm":
-        if q%2==0:
-            bottom_row[1]="X"
+        if q % 2 == 0:
+            bottom_row[1] = "X"
         else:
-            bottom_row[1]="O"
+            bottom_row[1] = "O"
     elif move == "br":
-        if q%2==0:
-            bottom_row[2]="X"
+        if q % 2 == 0:
+            bottom_row[2] = "X"
         else:
-            bottom_row[2]="O"
+            bottom_row[2] = "O"
     print(top_row)
     print(middle_row)
     print(bottom_row)
     did_i_win()
+
+
 def did_i_win():
-    if top_row[0]==middle_row[0] and middle_row[0]==bottom_row[0]:
+    if top_row[0] == middle_row[0] and middle_row[0] == bottom_row[0]:
         return "win"
     elif top_row[1] == middle_row[1] and middle_row[1] == bottom_row[1]:
         return "win"
@@ -208,10 +210,10 @@ def did_i_win():
         return "win"
 
 
-q=0
-while did_i_win()!= "win":
+q = 0
+while did_i_win() != "win":
 
     tictactoe(input("What move do you want to make? "), q)
-    q+=1
-if did_i_win()=="win":
+    q += 1
+if did_i_win() == "win":
     print("You win")
