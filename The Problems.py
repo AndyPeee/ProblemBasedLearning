@@ -121,8 +121,97 @@ mergelist(merge1=list1, merge2=list2)
 #There is a four player game that involves rolling a dice for each player.
 # Write a program that will keep track of the history of the rolls for each player.
 # For full credit, how could you use 2D lists?
+dice = 6
+biglist=[[],[],[],[]]
+for x in range(4):
+    g=int(input("amount of times to roll "))
+    for y in range(g):
+        dice_value = random.randint(1, dice)
+        biglist[x].append(dice_value)
+print(biglist)
 
-def diceroll(dice1, dice2, dice3, dice4):
-    (dice, numrolls):
-    amount = random.randint(1, dice)
-diceroll(dice1= ,dice2= ,dice3= ,dice4= )
+
+#Write a program that simulates Tic-Tac-Toe. For full credit, your game must make use of 2D lists.
+
+top_row = ["tl","tm","tr"]
+middle_row = ["ml","mm","mr"]
+bottom_row = ["bl","bm","br"]
+print(top_row)
+print(middle_row)
+print(bottom_row)
+def tictactoe(move,q):
+    if move == "tl":
+        if q%2==0:
+            top_row[0]="X"
+        else:
+            top_row[0]="O"
+    elif move == "tm":
+        if q%2==0:
+            top_row[1]="X"
+        else:
+            top_row[1]="O"
+    elif move == "tr":
+        if q%2==0:
+            top_row[2]="X"
+        else:
+            top_row[2]="O"
+    elif move == "ml":
+        if q%2==0:
+            middle_row[0]="X"
+        else:
+            middle_row[0]="O"
+    elif move == "mm":
+        if q%2==0:
+            middle_row[1]="X"
+        else:
+            middle_row[1]="O"
+    elif move == "mr":
+        if q%2==0:
+            middle_row[2]="X"
+        else:
+            middle_row[2]="O"
+    elif move == "bl":
+        if q%2==0:
+            bottom_row[0]="X"
+        else:
+            bottom_row[0]="O"
+    elif move == "bm":
+        if q%2==0:
+            bottom_row[1]="X"
+        else:
+            bottom_row[1]="O"
+    elif move == "br":
+        if q%2==0:
+            bottom_row[2]="X"
+        else:
+            bottom_row[2]="O"
+    print(top_row)
+    print(middle_row)
+    print(bottom_row)
+    did_i_win()
+def did_i_win():
+    if top_row[0]==middle_row[0] and middle_row[0]==bottom_row[0]:
+        return "win"
+    elif top_row[1] == middle_row[1] and middle_row[1] == bottom_row[1]:
+        return "win"
+    elif top_row[2] == middle_row[2] and middle_row[2] == bottom_row[2]:
+        return "win"
+    elif top_row[0] == top_row[1] and top_row[1] == top_row[2]:
+        return "win"
+    elif middle_row[0] == middle_row[1] and middle_row[1] == middle_row[2]:
+        return "win"
+    elif bottom_row[1] == bottom_row[0] and bottom_row[0] == bottom_row[2]:
+        return "win"
+    elif top_row[0] == middle_row[1] and middle_row[1] == bottom_row[2]:
+        return "win"
+    elif top_row[2] == middle_row[1] and middle_row[1] == bottom_row[0]:
+        return "win"
+
+
+q=0
+while did_i_win()!= "win":
+
+    tictactoe(input("What move do you want to make? "), q)
+    q+=1
+if did_i_win()=="win":
+    print("You win")
