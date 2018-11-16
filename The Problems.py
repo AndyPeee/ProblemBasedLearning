@@ -110,7 +110,7 @@ def mergelist(merge1, merge2):
 def bubblesort(merge1):
     for passthenum in range(len(merge1)-1, 0, -1):
         for i in range(passthenum):
-            if merge1[i]>merge1[i+1]:
+            if merge1[i] > merge1[i+1]:
                 holder1 = merge1[i]
                 merge1[i] = merge1[i+1]
                 merge1[i+1] = holder1
@@ -121,3 +121,8 @@ mergelist(merge1=list1, merge2=list2)
 #There is a four player game that involves rolling a dice for each player.
 # Write a program that will keep track of the history of the rolls for each player.
 # For full credit, how could you use 2D lists?
+
+def diceroll(dice1, dice2, dice3, dice4):
+    (dice, numrolls):
+    amount = random.randint(1, dice)
+diceroll(dice1= ,dice2= ,dice3= ,dice4= )
